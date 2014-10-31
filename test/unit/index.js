@@ -28,4 +28,31 @@ describe('boxofficemojo', function () {
 
   });
 
+  describe('#getGrossesByDate', function () {
+
+    function invalidArgumentsTests(date, callback) {
+      api.getGrossesByDate(date, function (error, films) {
+        assert.ok(error);
+        callback();
+      });
+    }
+
+    it('should return an error when date is null', function (done) {
+      invalidArgumentsTests(null, done);
+    });
+
+    it('should return an error when date is undefined', function (done) {
+      invalidArgumentsTests(undefined, done);
+    });
+
+    it('should return an error when date is an empty string', function (done) {
+      invalidArgumentsTests('', done);
+    });
+
+    it('should return an error when date is false', function (done) {
+      invalidArgumentsTests(false, done);
+    });
+
+  });
+
 });
