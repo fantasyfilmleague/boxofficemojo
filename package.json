@@ -1,0 +1,20 @@
+{
+  "name": "boxofficemojo",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Box Office Mojo",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "Bird Duck Software",
+  "license": "ISC",
+  "dependencies": {
+    "request": "2.47.0",
+    "cheerio": "0.17.0"
+  },
+  "devDependencies": {
+    "mocha": "2.0.1",
+    "sinon": "1.11.1"
+  }
+}
